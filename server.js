@@ -1,15 +1,20 @@
 const jsonServer = require("json-server");
 const auth = require("json-server-auth");
 const cors = require("cors");
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 
 const app = jsonServer.create();
-const router = jsonServer.router("db.json");
-
+const router = jsonServer.router("./db.json");
 app.db = router.db;
+
 
 const rules = auth.rewriter({
   users: 600,
+  jobs: 664,
+  posts: 664
+
+  
+
 });
 
 app.use(cors());
@@ -20,4 +25,4 @@ app.listen(port);
 
 console.log("Server is running on port:", port);
 
-/* A senha do Kenzinho é 123456 */
+/* A senha do joazinho é 123456 */
