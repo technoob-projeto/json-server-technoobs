@@ -2,9 +2,9 @@
 
 ## registro candidatos ##
 
-Method: POST
-Endpoint: BASE_URL/register
-body:{dados no formato abaixo, nao equecer de mandar o type, e o “myjobs” como array vazio}
+Method: POST|
+Endpoint: BASE_URL/register|
+body:{dados no formato abaixo, nao equecer de mandar o type, e o “myjobs” como array vazio}|
 RESPONSE: 201 Created
 
 exemplo:
@@ -50,15 +50,16 @@ exemplo:
 
 ## registro empresas ##
 
-Method: POST
-Endpoint: BASE_URL/register
-body:{dados no formato abaixo, nao equecer de mandar o type}
+Method: POST |
+Endpoint: BASE_URL/register |
+body:{dados no formato abaixo, nao equecer de mandar o type} |
 RESPONSE: 201 Created
 
 exemplo:
 
    users:[
      {
+  
       "id": 2,
       "type": "company",
       "name": "Magazine luiza",
@@ -96,13 +97,30 @@ retorna o usuario
 ## vagas de emprego ##
 
 
-Method: GET                                                       Method: PATH                                        Method: POST 
-Endpoint: BASE_URL/jobs                                           Endpoint: BASE_URL/jobs/id                          Endpoint: BASE_URL/jobs
-precisa de um token bearer                                        precisa de um token bearer                          precisa de um token bearer
-RESPONSE 200 OK                                                   RESPONSE 200 OK                                     RESPONSE 201 CREATED
-exibe todas as vagas                                              se candidatar em uma vaga                           Body:{ dados no formato abaixo 
-                                                                                                                      nao esquecer de mandar o type }
-                                                                               Body:  {
+Method: GET    exibe todas as vagas   RESPONSE 200 OK      Endpoint: BASE_URL/jobs                                           
+
+
+
+Method: PATH   se candidatar em uma vaga        RESPONSE 200 OK    Endpoint: BASE_URL/jobs/id                         
+
+
+
+Method: POST   Body:{ dados no formato abaixo nao esquecer de mandar o type } RESPONSE 201 CREATED  Endpoint: BASE_URL/jobs
+                        
+
+
+                                   
+
+
+                                         
+
+                                                                                                                    
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           Body:  {
                                               
                                                                                                  "candidates":[
                                                                                                            {
@@ -116,7 +134,8 @@ exibe todas as vagas                                              se candidatar 
  exemplo:
   
   "Jobs": [
-    {
+  
+  {
       "title": "Desenvolvedor front end”
       "description": “Desenvolvimento de software frontend. Acompanhamento de bugs e softwares para suporte; É desejável o conhecimento/domínio de JavaScript..”,
       “skills”:[“javascript”]
